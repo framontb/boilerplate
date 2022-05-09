@@ -38,6 +38,82 @@
 			>
 			<option value="*">JALL</option>
 		</field>
+
+		<field
+			name="featured"
+			type="list"
+			label="JFEATURED"
+			default="0"
+			validate="options"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="published"
+			type="list"
+			label="JSTATUS"
+			default="1"
+			id="published"
+			class="custom-select-color-state"
+			size="1"
+			>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field
+			name="publish_up"
+			type="calendar"
+			label="COM_FOOS_FIELD_PUBLISH_UP_LABEL"
+			translateformat="true"
+			showtime="true"
+			size="22"
+			filter="user_utc"
+		/>
+
+		<field
+			name="publish_down"
+			type="calendar"
+			label="COM_FOOS_FIELD_PUBLISH_DOWN_LABEL"
+			translateformat="true"
+			showtime="true"
+			size="22"
+			filter="user_utc"
+		/>
+
+		<field
+			name="catid"
+			type="categoryedit"
+			label="JCATEGORY"
+			extension="com_foos"
+			addfieldprefix="Joomla\Component\Categories\Administrator\Field"
+			required="true"
+			default=""
+		/>
+
+		<field
+			name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			size="1"
+		/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		/>
+
 	</fieldset>
 	<fields name="params" label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS">
 		<fieldset name="display" label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS">
@@ -61,80 +137,6 @@
 				useglobal="true"
 			/>
 
-			<field
-				name="featured"
-				type="list"
-				label="JFEATURED"
-				default="0"
-				validate="options"
-			>
-				<option value="0">JNO</option>
-				<option value="1">JYES</option>
-			</field>
-
-			<field
-				name="published"
-				type="list"
-				label="JSTATUS"
-				default="1"
-				id="published"
-				class="custom-select-color-state"
-				size="1"
-				>
-				<option value="1">JPUBLISHED</option>
-				<option value="0">JUNPUBLISHED</option>
-				<option value="2">JARCHIVED</option>
-				<option value="-2">JTRASHED</option>
-			</field>
-
-			<field
-				name="publish_up"
-				type="calendar"
-				label="COM_FOOS_FIELD_PUBLISH_UP_LABEL"
-				translateformat="true"
-				showtime="true"
-				size="22"
-				filter="user_utc"
-			/>
-
-			<field
-				name="publish_down"
-				type="calendar"
-				label="COM_FOOS_FIELD_PUBLISH_DOWN_LABEL"
-				translateformat="true"
-				showtime="true"
-				size="22"
-				filter="user_utc"
-			/>
-
-			<field
-				name="catid"
-				type="categoryedit"
-				label="JCATEGORY"
-				extension="com_foos"
-				addfieldprefix="Joomla\Component\Categories\Administrator\Field"
-				required="true"
-				default=""
-			/>
-
-			<field
-				name="access"
-				type="accesslevel"
-				label="JFIELD_ACCESS_LABEL"
-				size="1"
-			/>
-
-			<field
-				name="checked_out"
-				type="hidden"
-				filter="unset"
-			/>
-
-			<field
-				name="checked_out_time"
-				type="hidden"
-				filter="unset"
-			/>
 		</fieldset>
 	</fields>
 </form>

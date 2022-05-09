@@ -30,6 +30,9 @@ $this->useCoreUI = true;
 		<?php echo HTMLHelper::_('uitab.startTabSet', $this->tab_name, ['active' => 'details']); ?>
 		<?php echo HTMLHelper::_('uitab.addTab', $this->tab_name, 'details', empty($this->item->id) ? Text::_('COM_FOOS_NEW_FOO') : Text::_('COM_FOOS_EDIT_FOO')); ?>
 		<?php echo $this->form->renderField('name'); ?>
+        <?php echo $this->form->renderField('catid'); ?>
+        <?php echo $this->form->renderField('featured'); ?>
+		<!-- Include here the other field you need in the form -->
 
 		<?php if (is_null($this->item->id)) : ?>
 			<?php echo $this->form->renderField('alias'); ?>
